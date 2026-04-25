@@ -41,7 +41,7 @@ def crear_tablas():
     conn.close()
 
 
-def crear_usuario_admin():  # ✅ ahora está bien alineado
+def crear_usuario_admin():
     conn = conectar()
     cursor = conn.cursor()
 

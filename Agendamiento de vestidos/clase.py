@@ -30,35 +30,81 @@
 
 # # Mostramos el resultado
 # print(f"El área del triángulo es: {area}")
-def calcular_area():
-    print("--- Calculadora de Área de Rectángulos ---")
-    try:
-        # 1. Captura de datos
-        b = float(input("Introduce la base: "))
-        h = float(input("Introduce la altura: "))
+
+
+#funcion usando el try, pero investigando es mejor usar un ciclo y dentro de ese ciclo colocar el try paa el manejo de errores
+
+# def calcular_area():
+#     print("--- Calculadora de Área de Rectángulos ---")
+#     try:
+#         # 1. Captura de datos
+#         b = float(input("Introduce la base: "))
+#         h = float(input("Introduce la altura: "))
         
-        # 2. Validación y Cálculo
-        if b > 0 and h > 0:
-            area = (b * h)
+#         # 2. Validación y Cálculo
+#         if b > 0 and h > 0:
+#             area = (b * h)
             
-            # 3. Mostrar dibujo (DENTRO del if para que use b y h)
-                        # --- Visualización del Rectángulo ---
+#             # 3. Mostrar dibujo (DENTRO del if para que use b y h)
+#                         # --- Visualización del Rectángulo ---
+#             print("\n--- Visualización ---")
+#             print(f"   {'_' * 15}")           # Techo del rectángulo
+#             print(f"  |               |")
+#             print(f"  |               |  Altura: {h}")
+#             print(f"  |               |")
+#             print(f"  |_______________|")       # Base del rectángulo
+#             print(f"     Base: {b}")
+
+            
+#             # 4. Mostrar resultado final
+#             print(f"\nResultado: El área es {area:.2f}")
+#         else:
+#             print("Error: Las medidas deben ser positivas.")
+            
+#     except ValueError:
+#         print("Error: Por favor, introduce solo valores numéricos.")
+
+# # Llamamos a la función para ejecutar todo
+# calcular_area()
+
+
+def calcular_area():
+    
+    print("--- Calculadora de Área de Rectángulos ---")
+
+    while True:
+        try:
+            # obtener dtos del usuario
+            b = float(input("Introduce la base: "))
+            h = float(input("Introduce la altura: "))
+
+            # Validación
+            if b <= 0 or h <= 0:
+                print("Error: Las medidas deben ser positivas.\n")
+                continue
+
+            # Cálculo
+            area = b * h
+
+            # Visualización
             print("\n--- Visualización ---")
-            print(f"   {'_' * 15}")           # Techo del rectángulo
+            
+            print(f"   _______________")
             print(f"  |               |")
             print(f"  |               |  Altura: {h}")
             print(f"  |               |")
-            print(f"  |_______________|")       # Base del rectángulo
+            print(f"  |_______________|")
             print(f"     Base: {b}")
 
-            
-            # 4. Mostrar resultado final
+            # Resultado
             print(f"\nResultado: El área es {area:.2f}")
-        else:
-            print("Error: Las medidas deben ser positivas.")
-            
-    except ValueError:
-        print("Error: Por favor, introduce solo valores numéricos.")
 
-# Llamamos a la función para ejecutar todo
+            # Salir del bucle si todo salió bien
+            break
+
+        except ValueError:
+            print("Error: Debes ingresar solo números.\n")
+
+
+# Ejecutar función
 calcular_area()

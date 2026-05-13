@@ -68,43 +68,136 @@
 # calcular_area()
 
 
-def calcular_area():
+# def calcular_area():
     
-    print("--- Calculadora de Área de Rectángulos ---")
+#     print("--- Calculadora de Área de Rectángulos ---")
 
-    while True:
-        try:
-            # obtener dtos del usuario
-            b = float(input("Introduce la base: "))
-            h = float(input("Introduce la altura: "))
+#     while True:
+#         try:
+#             # obtener dtos del usuario
+#             b = float(input("Introduce la base: "))
+#             h = float(input("Introduce la altura: "))
 
-            # Validación
-            if b <= 0 or h <= 0:
-                print("Error: Las medidas deben ser positivas.\n")
-                continue
+#             # Validación
+#             if b <= 0 or h <= 0:
+#                 print("Error: Las medidas deben ser positivas.\n")
+#                 continue
 
-            # Cálculo
-            area = b * h
+#             # Cálculo
+#             area = b * h
 
-            # Visualización
-            print("\n--- Visualización ---")
+#             # Visualización
+#             print("\n--- Visualización ---")
             
-            print(f"   _______________")
-            print(f"  |               |")
-            print(f"  |               |  Altura: {h}")
-            print(f"  |               |")
-            print(f"  |_______________|")
-            print(f"     Base: {b}")
+#             print(f"   _______________")
+#             print(f"  |               |")
+#             print(f"  |               |  Altura: {h}")
+#             print(f"  |               |")
+#             print(f"  |_______________|")
+#             print(f"     Base: {b}")
 
-            # Resultado
-            print(f"\nResultado: El área es {area:.2f}")
+#             # Resultado
+#             print(f"\nResultado: El área es {area:.2f}")
 
-            # Salir del bucle si todo salió bien
-            break
+#             # Salir del bucle si todo salió bien
+#             break
 
-        except ValueError:
-            print("Error: Debes ingresar solo números.\n")
+#         except ValueError:
+#             print("Error: Debes ingresar solo números.\n")
 
 
-# Ejecutar función
-calcular_area()
+# # Ejecutar función
+# calcular_area()
+
+
+# una prueba para crear las funciones de la mecanica de fluidos "FÍSICA".
+# MECÁNICA DE FLUIDOS
+
+
+# funcion para la densidad.
+def densidad():
+    try:
+        masa = float(input("Introduce la masa (kg): "))
+        volumen = float(input("Introduce el volumen (m³): "))
+
+        if volumen <= 0 or masa <= 0:
+            print("Error: Ingrese valores válidos.")
+            return
+
+        resultado = masa / volumen
+
+        print(f"\nLa densidad es: {resultado:.2f} kg/m³")
+
+    except ValueError:
+        print("Error: Por favor, introduce solo valores numéricos.")
+
+
+# funcion para el peso W
+
+def peso():
+    try:
+        masa = float(input("Introduce la masa (kg): "))
+
+        if masa <= 0:
+            print("Error: Ingrese un valor válido.")
+            return
+
+        gravedad = 9.81
+        resultado = masa * gravedad
+
+        print(f"\nEl peso es: {resultado:.2f} N")
+
+    except ValueError:
+        print("Error: Por favor, introduce solo valores numéricos.")
+
+
+# funcion para peso específico
+
+def peso_especifico():
+    try:
+        masa = float(input("Introduce la masa (kg): "))
+        volumen = float(input("Introduce el volumen (m³): "))
+
+        if volumen <= 0 or masa <= 0:
+            print("Error: Ingrese valores válidos.")
+            return
+
+        resultado = (masa / volumen) * 9.81
+
+        print(f"\nEl peso específico es: {resultado:.2f} N/m³")
+
+    except ValueError:
+        print("Error: Por favor, introduce solo valores numéricos.")
+
+
+
+# menu para ilustrar funciones.        
+
+while True:
+
+    print("\n==============================")
+    print("   CALCULADORA FÍSICA")
+    print("==============================")
+    print("1. Calcular densidad")
+    print("2. Calcular peso")
+    print("3. Calcular peso específico")
+    print("4. Salir")
+
+    opcion = input("\nSeleccione una opción: ")
+
+    # OPCIONES
+    if opcion == "1":
+        densidad()
+
+    elif opcion == "2":
+        peso()
+
+    elif opcion == "3":
+        peso_especifico()
+
+    elif opcion == "4":
+        print("\nPrograma finalizado.")
+        break
+
+    else:
+        print("\nOpción inválida. Intente nuevamente.")

@@ -104,7 +104,7 @@ ctk.set_default_color_theme("blue")
 root = ctk.CTk()
 
 root.title("Cliente Gemini AI")
-root.geometry("700x600")
+root.geometry("600x700")
 root.resizable(True, True)
 
 titulo = ctk.CTkLabel(

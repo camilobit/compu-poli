@@ -68,46 +68,46 @@
 # calcular_area()
 
 
-def calcular_area():
+# def calcular_area():
     
-    print("--- Calculadora de Área de Rectángulos ---")
+#     print("--- Calculadora de Área de Rectángulos ---")
 
-    while True:
-        try:
-            # obtener dtos del usuario
-            b = float(input("Introduce la base: "))
-            h = float(input("Introduce la altura: "))
+#     while True:
+#         try:
+#             # obtener dtos del usuario
+#             b = float(input("Introduce la base: "))
+#             h = float(input("Introduce la altura: "))
 
-            # Validación
-            if b <= 0 or h <= 0:
-                print("Error: Las medidas deben ser positivas.\n")
-                continue
+#             # Validación
+#             if b <= 0 or h <= 0:
+#                 print("Error: Las medidas deben ser positivas.\n")
+#                 continue
 
-            # Cálculo
-            area = b * h
+#             # Cálculo
+#             area = b * h
 
-            # Visualización
-            print("\n--- Visualización ---")
+#             # Visualización
+#             print("\n--- Visualización ---")
             
-            print(f"   _______________")
-            print(f"  |               |")
-            print(f"  |               |  Altura: {h}")
-            print(f"  |               |")
-            print(f"  |_______________|")
-            print(f"     Base: {b}")
+#             print(f"   _______________")
+#             print(f"  |               |")
+#             print(f"  |               |  Altura: {h}")
+#             print(f"  |               |")
+#             print(f"  |_______________|")
+#             print(f"     Base: {b}")
 
-            # Resultado
-            print(f"\nResultado: El área es {area:.2f}")
+#             # Resultado
+#             print(f"\nResultado: El área es {area:.2f}")
 
-            # Salir del bucle si todo salió bien
-            break
+#             # Salir del bucle si todo salió bien
+#             break
 
-        except ValueError:
-            print("Error: Debes ingresar solo números.\n")
+#         except ValueError:
+#             print("Error: Debes ingresar solo números.\n")
 
 
-# Ejecutar función
-calcular_area()
+# # Ejecutar función
+# calcular_area()
 
 
 
@@ -145,150 +145,150 @@ calcular_area()
 # FUNCIONES
 # -----------------------------------
 
-# def densidad():
-#     try:
-#         masa = float(input("Introduce la masa (kg): "))
-#         volumen = float(input("Introduce el volumen (m³): "))
+def densidad():
+    try:
+        masa = float(input("Introduce la masa (kg): "))
+        volumen = float(input("Introduce el volumen (m³): "))
 
-#         if volumen <= 0 or masa <= 0:
-#             print("Error: Ingrese valores válidos.")
-#             return
+        if volumen <= 0 or masa <= 0:
+            print("Error: Ingrese valores válidos.")
+            return
 
-#         resultado = masa / volumen
+        resultado = masa / volumen
 
-#         print(f"\nLa densidad es: {resultado:.2f} kg/m³")
+        print(f"\nLa densidad es: {resultado:.2f} kg/m³")
 
-#     except ValueError:
-#         print("Error: Por favor, introduce solo valores numéricos.")
-
-
-# # -----------------------------------
-
-# def peso():
-#     try:
-#         masa = float(input("Introduce la masa (kg): "))
-
-#         if masa <= 0:
-#             print("Error: Ingrese un valor válido.")
-#             return
-
-#         gravedad = 9.81
-#         resultado = masa * gravedad
-
-#         print(f"\nEl peso es: {resultado:.2f} N")
-
-#     except ValueError:
-#         print("Error: Por favor, introduce solo valores numéricos.")
+    except ValueError:
+        print("Error: Por favor, introduce solo valores numéricos.")
 
 
-# # -----------------------------------
+# -----------------------------------
 
-# def peso_especifico():
-#     try:
-#         masa = float(input("Introduce la masa (kg): "))
-#         volumen = float(input("Introduce el volumen (m³): "))
+def peso():
+    try:
+        masa = float(input("Introduce la masa (kg): "))
 
-#         if volumen <= 0 or masa <= 0:
-#             print("Error: Ingrese valores válidos.")
-#             return
+        if masa <= 0:
+            print("Error: Ingrese un valor válido.")
+            return
 
-#         resultado = (masa / volumen) * 9.81
+        gravedad = 9.81
+        resultado = masa * gravedad
 
-#         print(f"\nEl peso específico es: {resultado:.2f} N/m³")
+        print(f"\nEl peso es: {resultado:.2f} N")
 
-#     except ValueError:
-#         print("Error: Por favor, introduce solo valores numéricos.")
-
-
-# # -----------------------------------
-
-# def funcion_bernoulli():
-#     try:
-#         presion1 = float(input("Introduce la presión en el punto 1 (Pa): "))
-#         velocidad1 = float(input("Introduce la velocidad en el punto 1 (m/s): "))
-#         altura1 = float(input("Introduce la altura en el punto 1 (m): "))
-
-#         presion2 = float(input("Introduce la presión en el punto 2 (Pa): "))
-#         velocidad2 = float(input("Introduce la velocidad en el punto 2 (m/s): "))
-#         altura2 = float(input("Introduce la altura en el punto 2 (m): "))
-
-#         resultado = (
-#             presion1 + 0.5 * 1000 * velocidad1**2 + 1000 * 9.81 * altura1
-#         ) - (
-#             presion2 + 0.5 * 1000 * velocidad2**2 + 1000 * 9.81 * altura2
-#         )
-
-#         print(f"\nEl resultado de Bernoulli es: {resultado:.2f} J")
-
-#     except ValueError:
-#         print("Error: Por favor, introduce solo valores numéricos.")
+    except ValueError:
+        print("Error: Por favor, introduce solo valores numéricos.")
 
 
-# # -----------------------------------
+# -----------------------------------
 
-# def funcion_bernoulli_presion():
-#     try:
-#         presion1 = float(input("Introduce la presión en el punto 1 (Pa): "))
-#         velocidad1 = float(input("Introduce la velocidad en el punto 1 (m/s): "))
-#         altura1 = float(input("Introduce la altura en el punto 1 (m): "))
+def peso_especifico():
+    try:
+        masa = float(input("Introduce la masa (kg): "))
+        volumen = float(input("Introduce el volumen (m³): "))
 
-#         velocidad2 = float(input("Introduce la velocidad en el punto 2 (m/s): "))
-#         altura2 = float(input("Introduce la altura en el punto 2 (m): "))
+        if volumen <= 0 or masa <= 0:
+            print("Error: Ingrese valores válidos.")
+            return
 
-#         resultado = (
-#             presion1
-#             + 0.5 * 1000 * velocidad1**2
-#             + 1000 * 9.81 * altura1
-#             - (
-#                 0.5 * 1000 * velocidad2**2
-#                 + 1000 * 9.81 * altura2
-#             )
-#         )
+        resultado = (masa / volumen) * 9.81
 
-#         print(f"\nLa presión en el punto 2 es: {resultado:.2f} Pa")
+        print(f"\nEl peso específico es: {resultado:.2f} N/m³")
 
-#     except ValueError:
-#         print("Error: Por favor, introduce solo valores numéricos.")
+    except ValueError:
+        print("Error: Por favor, introduce solo valores numéricos.")
 
 
-# # -----------------------------------
-# # MENÚ PRINCIPAL
-# # -----------------------------------
+# -----------------------------------
 
-# while True:
+def funcion_bernoulli():
+    try:
+        presion1 = float(input("Introduce la presión en el punto 1 (Pa): "))
+        velocidad1 = float(input("Introduce la velocidad en el punto 1 (m/s): "))
+        altura1 = float(input("Introduce la altura en el punto 1 (m): "))
 
-#     print("\n==============================")
-#     print("     CALCULADORA FÍSICA")
-#     print("==============================")
-#     print("1. Calcular densidad")
-#     print("2. Calcular peso")
-#     print("3. Calcular peso específico")
-#     print("4. Ecuación de Bernoulli")
-#     print("5. Calcular presión con Bernoulli")
-#     print("6. Salir")
+        presion2 = float(input("Introduce la presión en el punto 2 (Pa): "))
+        velocidad2 = float(input("Introduce la velocidad en el punto 2 (m/s): "))
+        altura2 = float(input("Introduce la altura en el punto 2 (m): "))
 
-#     opcion = input("\nSeleccione una opción: ")
+        resultado = (
+            presion1 + 0.5 * 1000 * velocidad1**2 + 1000 * 9.81 * altura1
+        ) - (
+            presion2 + 0.5 * 1000 * velocidad2**2 + 1000 * 9.81 * altura2
+        )
 
-#     # OPCIONES
+        print(f"\nEl resultado de Bernoulli es: {resultado:.2f} J")
 
-#     if opcion == "1":
-#         densidad()
+    except ValueError:
+        print("Error: Por favor, introduce solo valores numéricos.")
 
-#     elif opcion == "2":
-#         peso()
 
-#     elif opcion == "3":
-#         peso_especifico()
+# -----------------------------------
 
-#     elif opcion == "4":
-#         funcion_bernoulli()
+def funcion_bernoulli_presion():
+    try:
+        presion1 = float(input("Introduce la presión en el punto 1 (Pa): "))
+        velocidad1 = float(input("Introduce la velocidad en el punto 1 (m/s): "))
+        altura1 = float(input("Introduce la altura en el punto 1 (m): "))
 
-#     elif opcion == "5":
-#         funcion_bernoulli_presion()
+        velocidad2 = float(input("Introduce la velocidad en el punto 2 (m/s): "))
+        altura2 = float(input("Introduce la altura en el punto 2 (m): "))
 
-#     elif opcion == "6":
-#         print("\nPrograma finalizado.")
-#         break
+        resultado = (
+            presion1
+            + 0.5 * 1000 * velocidad1**2
+            + 1000 * 9.81 * altura1
+            - (
+                0.5 * 1000 * velocidad2**2
+                + 1000 * 9.81 * altura2
+            )
+        )
 
-#     else:
-#         print("\nOpción inválida. Intente nuevamente.")
+        print(f"\nLa presión en el punto 2 es: {resultado:.2f} Pa")
+
+    except ValueError:
+        print("Error: Por favor, introduce solo valores numéricos.")
+
+
+# -----------------------------------
+# MENÚ PRINCIPAL
+# -----------------------------------
+
+while True:
+
+    print("\n==============================")
+    print("     CALCULADORA FÍSICA")
+    print("==============================")
+    print("1. Calcular densidad")
+    print("2. Calcular peso")
+    print("3. Calcular peso específico")
+    print("4. Ecuación de Bernoulli")
+    print("5. Calcular presión con Bernoulli")
+    print("6. Salir")
+
+    opcion = input("\nSeleccione una opción: ")
+
+    # OPCIONES
+
+    if opcion == "1":
+        densidad()
+
+    elif opcion == "2":
+        peso()
+
+    elif opcion == "3":
+        peso_especifico()
+
+    elif opcion == "4":
+        funcion_bernoulli()
+
+    elif opcion == "5":
+        funcion_bernoulli_presion()
+
+    elif opcion == "6":
+        print("\nPrograma finalizado.")
+        break
+
+    else:
+        print("\nOpción inválida. Intente nuevamente.")
